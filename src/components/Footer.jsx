@@ -41,20 +41,20 @@ export default function Footer() {
           <h4 className="font-bold text-white mb-3 uppercase tracking-wider text-[11px]">Factory Address & Support</h4>
           <p className="leading-relaxed mb-2 flex items-start gap-1.5">
             <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-            <span>Jai Industries Industrial Zone, Plot 42-45, Phase II, Solar Park Road, Rajasthan / Gujarat Manufacturing Hub, India.</span>
+            <span>Jai Industries, New Bus Stand Bali, Bali Dist. Pali, Rajasthan, India.</span>
           </p>
           <p className="mb-2 flex items-center gap-1.5">
             <Mail className="w-4 h-4 text-amber-400 shrink-0" /> info@jaiindustries.com
           </p>
           <p className="flex items-center gap-1.5">
-            <Phone className="w-4 h-4 text-amber-400 shrink-0" /> Helpline: +91 98765 43210
+            <Phone className="w-4 h-4 text-amber-400 shrink-0" /> Helpline: +91 9828104233
           </p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-slate-900 flex flex-wrap justify-between items-center text-[11px] text-slate-500">
         <div>© 2026 Jai Industries. All rights reserved. Empanelled Vendor for PM Surya Ghar Yojana.</div>
-        <div>Vite + React Production App with Official Logo Branding.</div>
+        <div>Build by Hitesh.</div>
       </div>
     </footer>
   );

@@ -16,8 +16,8 @@ export default function Navbar() {
             <span className="hidden md:flex items-center gap-1.5"><Award className="w-4 h-4 text-amber-400" /> ISO 9001:2015 Certified Manufacturing</span>
           </div>
           <div className="flex items-center gap-4 font-medium">
-            <a href="tel:+919876543210" className="hover:text-amber-400 transition-colors flex items-center gap-1">
-              <Phone className="w-3.5 h-3.5 text-amber-400" /> Sales: +91 98765 43210
+            <a href="tel:+919828104233" className="hover:text-amber-400 transition-colors flex items-center gap-1">
+              <Phone className="w-3.5 h-3.5 text-amber-400" /> Sales: +91 9828104233 / +91 9783588201
             </a>
             <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors">
               WhatsApp Support
