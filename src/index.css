@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Solar Theme (Warm Gold Sun Aura + Deep Solar Navy) */
+  --bg-primary: #0b1120;
+  --bg-secondary: #111827;
+  --bg-card: rgba(17, 24, 39, 0.85);
+  --bg-card-border: rgba(245, 158, 11, 0.3);
+  --text-main: #f8fafc;
+  --text-muted: #cbd5e1;
+  --brand-accent: #f59e0b;
+  --brand-accent-hover: #d97706;
+  --hero-overlay: linear-gradient(135deg, rgba(11, 17, 32, 0.88) 0%, rgba(245, 158, 11, 0.25) 100%);
+  --glow-shadow: 0 10px 30px -5px rgba(245, 158, 11, 0.35);
+  --glass-bg: rgba(17, 24, 39, 0.82);
+  --nav-bg: rgba(11, 17, 32, 0.92);
+}
+
+body.theme-torch {
+  /* Torch Theme (Neon Beam Cyan + Midnight Obsidian) */
+  --bg-primary: #060911;
+  --bg-secondary: #0f172a;
+  --bg-card: rgba(15, 23, 42, 0.85);
+  --bg-card-border: rgba(56, 189, 248, 0.35);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --brand-accent: #38bdf8;
+  --brand-accent-hover: #0284c7;
+  --hero-overlay: linear-gradient(135deg, rgba(6, 9, 17, 0.92) 0%, rgba(14, 165, 233, 0.35) 100%);
+  --glow-shadow: 0 10px 30px -5px rgba(56, 189, 248, 0.4);
+  --glass-bg: rgba(15, 23, 42, 0.85);
+  --nav-bg: rgba(6, 9, 17, 0.92);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--bg-card-border);
+  transition: all 0.4s ease;
+}
+
+.glass-panel:hover {
+  border-color: var(--brand-accent);
+  box-shadow: var(--glow-shadow);
+}
+
+/* Toggle Switch Styling */
+.toggle-switch-container {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  padding: 4px;
+}
+
+.toggle-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-btn.active {
+  background: var(--brand-accent);
+  color: #0f172a;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Layer Stack Cards */
+.layer-card {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.layer-card:hover, .layer-card.active-layer {
+  transform: translateY(-4px);
+  border-color: var(--brand-accent);
+  box-shadow: var(--glow-shadow);
+}
+
+.layer-card.active-layer {
+  background: var(--brand-accent);
+  color: #0f172a !important;
+}
+
+.layer-card.active-layer * {
+  color: #0f172a !important;
+}
+
+/* Dynamic Lumen Beam */
+.lumen-beam-demo {
+  transition: all 0.3s ease;
+}
+
+input[type=range] {
+  accent-color: var(--brand-accent);
+}
