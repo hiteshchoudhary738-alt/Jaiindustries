@@ -72,25 +72,25 @@ const solarLayersData = {
 // RECHARGEABLE TORCH DATA
 const torchModelTabs = {
   pro_x1: {
-    name: '🔦 Jai Solar-Torch Pro X1',
-    tag: 'Dual Solar + AC Charging',
+    name: ' Jai Plus',
+    tag: 'Waterproof Night Specialist',
     description: 'Flagship agricultural torch featuring dual solar panel charging, 1200+ lumens spotlight, and 18-hour continuous battery backup for farm night irrigation.'
   },
   turbobeam: {
-    name: '⚡ Jai Turbo-Beam 1500',
+    name: ' Jai Lite',
     tag: 'Ultra-Long 1000m Throw',
     description: 'High-intensity searchlight built with deep aluminum reflector cup, throwing a focused 1500 lumens beam up to 1000 meters across pitch black fields.'
   },
-  fieldguard: {
-    name: '🌧️ Jai Field-Guard IP65',
-    tag: 'Waterproof Night Specialist',
-    description: 'Rugged rubberized water-sealed body engineered specifically for heavy rainfall, muddy farm tracks, and emergency rescue operations.'
-  },
-  toughhawk: {
-    name: '🛡️ Jai Tough-Hawk Alloy',
-    tag: 'Drop-Proof Reinforced Alloy',
-    description: 'Military-grade aircraft aluminum shell resistant to 3-meter drops, heavy impact, and extreme farm field wear and tear.'
-  }
+  // fieldguard: {
+  //   name: ' Jai Field-Guard IP65',
+  //   tag: 'Waterproof Night Specialist',
+  //   description: 'Rugged rubberized water-sealed body engineered specifically for heavy rainfall, muddy farm tracks, and emergency rescue operations.'
+  // },
+  // toughhawk: {
+  //   name: ' Jai Tough-Hawk Alloy',
+  //   tag: 'Drop-Proof Reinforced Alloy',
+  //   description: 'Military-grade aircraft aluminum shell resistant to 3-meter drops, heavy impact, and extreme farm field wear and tear.'
+  // }
 };
 
 const torchLayersData = {

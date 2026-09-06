@@ -146,7 +146,7 @@ export default function ProductShowcase() {
               <a href="#contact-section" className="px-6 py-3 rounded-xl font-bold bg-sky-400 hover:bg-sky-300 text-slate-950 text-xs shadow-lg transition-all flex items-center gap-2">
                 <ShoppingCart className="w-4 h-4" /> Order Bulk Torches (Factory Direct)
               </a>
-              <a href="https://wa.me/919876543210?text=I%20want%20to%20order%20Jai%20Rechargeable%20Torches" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-xl font-bold border border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 text-xs flex items-center gap-2 transition-all">
+              <a href="https://wa.me/919828104233?text=I%20want%20to%20order%20Jai%20Rechargeable%20Torches" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-xl font-bold border border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 text-xs flex items-center gap-2 transition-all">
                 Quick WhatsApp Order
               </a>
             </div>

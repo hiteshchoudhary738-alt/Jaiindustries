@@ -19,7 +19,7 @@ export default function Navbar() {
             <a href="tel:+919828104233" className="hover:text-amber-400 transition-colors flex items-center gap-1">
               <Phone className="w-3.5 h-3.5 text-amber-400" /> Sales: +91 9828104233 / +91 9783588201
             </a>
-            <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors">
+            <a href="https://wa.me/919828104233" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors">
               WhatsApp Support
             </a>
           </div>
@@ -61,14 +61,14 @@ export default function Navbar() {
                 className={`toggle-btn flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all ${!isNight ? 'active text-slate-950' : 'text-slate-300'}`}
               >
                 <Sun className="w-3.5 h-3.5 text-amber-400" />
-                <span className="hidden sm:inline">☀️ Solar (Day)</span>
+                <span className="hidden sm:inline"> Solar (Day)</span>
               </button>
               <button
                 onClick={() => toggleTheme('torch')}
                 className={`toggle-btn flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all ${isNight ? 'active text-slate-950' : 'text-slate-300'}`}
               >
                 <Flashlight className="w-3.5 h-3.5 text-sky-400" />
-                <span className="hidden sm:inline">🔦 Torch (Night)</span>
+                <span className="hidden sm:inline"> Torch (Night)</span>
               </button>
             </div>
 
