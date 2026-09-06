@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, ShieldCheck, Factory, Award, CheckCircle2, User, Phone, MapPin } from 'lucide-react';
+import { Send, ShieldCheck, Factory, Award, CheckCircle2, User, Phone, MapPin, Loader2, AlertCircle } from 'lucide-react';
 
 export default function LeadForm() {
   const [formData, setFormData] = useState({
@@ -11,10 +11,36 @@ export default function LeadForm() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setErrorMsg(null);
+
+    try {
+      const response = await fetch('http://localhost:5000/api/inquiries', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMsg(data.error || 'Failed to save inquiry to database.');
+      }
+    } catch (err) {
+      console.error('Error submitting form:', err);
+      setErrorMsg('Could not connect to backend server. Make sure database server is running.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -118,12 +144,30 @@ export default function LeadForm() {
               </select>
             </div>
 
+            {/* Error Banner */}
+            {errorMsg && (
+              <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center gap-3 text-red-400 text-xs font-semibold">
+                <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                <span>{errorMsg}</span>
+              </div>
+            )}
+
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full py-4 rounded-xl font-extrabold text-slate-950 bg-amber-400 hover:bg-amber-300 text-base shadow-xl shadow-amber-500/20 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3"
+              disabled={submitting}
+              className="w-full py-4 rounded-xl font-extrabold text-slate-950 bg-amber-400 hover:bg-amber-300 disabled:opacity-50 text-base shadow-xl shadow-amber-500/20 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3"
             >
-              <Send className="w-5 h-5" /> <span>Submit Inquiry & Calculate Exact Subsidy</span>
+              {submitting ? (
+                <>
+                  <Loader2 className="w-5 h-5 animate-spin" />
+                  <span>Saving Inquiry to PostgreSQL...</span>
+                </>
+              ) : (
+                <>
+                  <Send className="w-5 h-5" /> <span>Submit Inquiry & Save Data</span>
+                </>
+              )}
             </button>
 
             {/* Trust Badges Bar */}
